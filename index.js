@@ -3,8 +3,15 @@ var router = express.Router();
 var nodemailer = require('nodemailer');
 var cors = require('cors');
 const creds = require('./config');
+const path = require('path')
+const app = express()
+
+app.use(express.static(path.join(__dirname, 'build')));
 
 
+//Static file declarationapp.use(express.static(path.join(__dirname, 'react/build')));
+//production modeif(process.env.NODE_ENV === 'production') {  app.use(express.static(path.join(__dirname, 'react/build')));  //  app.get('*', (req, res) => {    res.sendfile(path.join(__dirname = 'client/build/index.html'));  })}
+//build modeapp.get('*', (req, res) => {  res.sendFile(path.join(__dirname+'/react/public/index.html'));})
 
 var transport = {
     host: 'smtp.gmail.com', // Don’t forget to replace with the SMTP host of your provider
@@ -21,10 +28,14 @@ transporter.verify((error, success) => {
   if (error) {
     console.log(error);
   } else {
-    console.log('Server is ready to take messages');
+    console.log(`Server is ready to take messages ${port}`);
   }
 });
 
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 
 router.post('/send', (req, res, next) => {
@@ -54,7 +65,7 @@ router.post('/send', (req, res, next) => {
   })
 })
 const port = process.env.PORT || 5000;
-const app = express()
+
 app.use(cors())
 app.use(express.json())
 app.use('/', router)

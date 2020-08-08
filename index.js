@@ -6,12 +6,8 @@ const creds = require('./config');
 const path = require('path')
 const app = express()
 
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, 'react/build')));
 
-
-//Static file declarationapp.use(express.static(path.join(__dirname, 'react/build')));
-//production modeif(process.env.NODE_ENV === 'production') {  app.use(express.static(path.join(__dirname, 'react/build')));  //  app.get('*', (req, res) => {    res.sendfile(path.join(__dirname = 'client/build/index.html'));  })}
-//build modeapp.get('*', (req, res) => {  res.sendFile(path.join(__dirname+'/react/public/index.html'));})
 
 var transport = {
     host: 'smtp.gmail.com', // Don’t forget to replace with the SMTP host of your provider
@@ -34,7 +30,7 @@ transporter.verify((error, success) => {
 
 
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'react/build', 'index.html'));
 });
 
 

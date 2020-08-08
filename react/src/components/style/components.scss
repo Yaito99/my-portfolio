@@ -1,0 +1,239 @@
+
+$main-1:#343a40;
+@import "./animation";
+#intro-section{
+	p{
+		font-size: 1.5rem;
+	}
+
+	.laptop-screen{
+		position: absolute;
+		top: 0;
+		right: 0;
+		left:0;
+		bottom: 0;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+}
+
+
+.my-lab{
+	background: url("/img/laptop.png");
+	height: 360px;
+	margin-top: 4rem;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;	
+	.d-flex{
+ 	 align-items: center;
+ 	 width: 100%;
+ 	 height: 100%;
+	}
+	.btn{
+		border:none;
+		background-color: transparent;
+	}
+	.btn::active { border-style: outset;};
+	.yaito-logo{
+			animation: logo-spin infinite 20s linear;	
+
+		}
+.svg-container{
+	margin-top: -1.5rem;
+	.fusion{
+			height: 270px;
+			width: 500px;			
+		}	
+		}		
+	.magic-work{
+		.btn{
+	
+			display: none;
+		}
+	}
+}
+
+#brower-playground{
+clip-path: polygon(0 -2%, 100% -2%, 100% 100%, 0% 100%);
+}
+#svg-brower{
+	.circle-1:hover{
+		cursor: pointer;
+	};
+}
+
+.hidden{
+	display: none;
+}
+.centered{
+	text-align: center;
+}
+.bt-border{
+	padding-bottom: .5rem;
+	border-bottom: 1px solid white;
+}
+#about-section{
+		.avatar{
+		width: 210px;
+	}
+	.aboutme{
+		text-align: center;
+		margin-bottom: 4rem;
+		p{
+			display: inline-block;
+			max-width: 40vw;
+		}
+	}
+	.skillset{
+		padding-left: 8rem;
+		.skill-bar{
+			margin-bottom: 1rem;
+			background-color: gray;
+			text-align: left;
+			.bar-name{
+				padding:2.5px;
+				width: 90px;
+				text-align: center;
+				background-color: black;
+			}
+			.bar-percent{
+				background-color: white;
+				padding:0!important;
+			}
+		}
+	}
+}
+.skillset-anime{
+	.skill-bar{
+				animation: slideInRight 1s linear;	
+	}
+	.col-lg-5{
+				animation: slideInLeft 1s linear;	
+	}
+}
+#projects-section{
+	.slider-show{
+		margin-top: 1rem;
+		background-color: transparent;
+		border:1px solid white;
+		width: 60vw;
+		height: 400px;
+		animation:  bounceInDown 2s linear;
+		.row{
+		height: 100%;		
+		.col{
+			padding:0;
+			height: 100%;
+		}	
+		.slider-show-col{
+			border-right: 1px solid white;
+
+			img{
+				width:100%;
+				height: 100%;
+			}
+		}
+		}
+	}
+	.slider-star-anime{
+		animation:  slider-spinning 2s linear;
+	}
+	.slider-star{
+		margin-top: 1rem;
+		background-color: gray;
+		width: 400px;
+		height: 400px;
+		padding:0 !important;
+		clip-path: polygon(50% 0%, 100% 50%,  50% 100% , 0% 50%);
+		.slider-row{
+			height: 50%;
+		}
+		.slider-row-1{
+			animation:  slider-color-changing-1 infinite 8s linear;	
+			}
+
+		.slider-row-2{
+			animation:  slider-color-changing-2 infinite 8s linear;				
+			}			
+		
+	}
+		.slider-nav{
+			text-align: center;
+			margin-top: 1.5rem;
+			.navar{
+				height: 15px;
+				width: 15px;
+				border:1px solid white;
+				border-radius: 20px;
+				margin-right: 0.5rem;
+			}
+			.navar-active{
+				background-color: white;
+			}			
+		.navar-active.active.focus, .navar-active.active:focus,
+		.navar-active.focus, .navar-active:active.focus, 
+		.navar-active:active:focus, .navar-active:focus {
+		  outline: none;
+		  box-shadow: none;
+		  background-color: white;
+		}	
+		}
+
+		.dbutton.active.focus, .dbutton.active:focus,
+		.dbutton.focus, .dbutton:active.focus, 
+		.dbutton:active:focus, .dbutton:focus {
+		  outline: none;
+		  box-shadow: none;
+		  background-color: transparent;
+		}			
+		.dbutton{
+			border:none;
+			background-color: transparent;
+		}
+
+	.slider{
+		border:1px solid white;
+		padding: 0;
+		overflow: hidden;
+		position: relative;
+		img{
+			width: 50%;
+			height: 50%;
+			position: absolute;
+		}
+		.project-1{
+			bottom: 0;
+			right: 0;
+		}
+		.project-2{
+			bottom: 0;
+			left:0;
+		}
+		.project-3{
+			top:0;
+			right: 0;		
+		}
+		.project-4{
+			top:0;
+			left:0;		
+		}
+
+	}	
+	.slider-color{
+		background: linear-gradient(to top,blue, green 100%);	
+	}
+
+}
+
+#contact-section{
+	.bt-border{
+		border-color: black;
+	}
+	#contact-switcher{
+		position: absolute;
+		right:0;
+		top:0;
+	}
+}

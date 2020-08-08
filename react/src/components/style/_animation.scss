@@ -1,0 +1,529 @@
+#svg-brower{
+	.circle-1{
+		animation:  bounceInDown 1s linear, exit-circle infinite 1s linear, ;
+	}
+}
+
+.anime-1{
+	animation: bounceInDown 1s linear;
+}
+.anime-2{
+	animation: rollIn 1s linear;
+}
+.anime-22{
+	animation: rollIn 1s linear;
+}
+.anime-3{
+	animation: fadeIn 1s linear;
+}
+.anime-33{
+	animation: fadeIn 0.5s linear;
+}
+
+.anime-4{
+	animation: slideInDown  1s linear;
+}
+.anime-5{
+	animation: rotateIn 1s linear;
+}
+.anime-61{
+	animation: slideInRight  0.5s linear ;
+}
+.anime-62{
+	animation: slideInRight  0.5s linear ;
+}
+.anime-63{
+	animation: slideInRight  0.5s linear ;
+}
+.anime-64{
+	animation: slideInRight  0.5s linear ;
+}
+.anime-65{
+	animation: slideInRight  0.5s linear ;
+}
+.anime-66{
+	animation: slideInRight  0.5s linear ;
+}
+.anime-67{
+	animation: slideInRight  0.5s linear ;
+}
+.anime-68{
+	animation: slideInRight  0.5s linear ;
+}
+#svg-navbar{
+	.rect-1{
+		animation: fadeIn  1s linear;
+	}
+}
+.scroll-anime{
+	animation: 	slideInDown 1s linear
+}
+
+
+.anime-scroll{
+	.scroll-anime{
+		animation: scrolling infinite 10s linear 1s;
+	}
+#svg-navbar{
+	.anime-22{
+		animation: scrolling-2 infinite 10s linear 1s;
+	}
+	.anime-33{ 
+		animation: scrolling-3 infinite 10s linear 1s;
+	}
+	.rect-1{
+		animation: scrolling-33 infinite 10s linear 1s;		
+	}
+}
+#svg-body{
+	.anime-4{
+		animation: scrolling-4 infinite 10s linear 1s;		
+	}
+	.anime-5{
+		animation: scrolling-4 infinite 10s linear 1s;			
+	}
+}
+#svg-under-body{
+	.anime-61{
+		animation: scrolling-61 infinite 10s linear 1s;			
+	}
+	.anime-62{
+		animation: scrolling-62 infinite 10s linear 1s;			
+	}
+	.anime-63{
+		animation: scrolling-63 infinite 10s linear 1s;			
+	}
+	.anime-64{
+		animation: scrolling-64 infinite 10s linear 1s;			
+	}
+	.anime-65{
+		animation: scrolling-65 infinite 10s linear 1s;			
+	}
+	.anime-66{
+		animation: scrolling-66 infinite 10s linear 1s;			
+	}
+	.anime-67{
+		animation: scrolling-67 infinite 10s linear 1s;			
+	}
+	.anime-68{
+		animation: scrolling-68 infinite 10s linear 1s;			
+	}							
+}
+}
+
+.bar-animation{
+	animation: fillingup 2s linear;	
+}
+
+@keyframes fillingup {
+	from {
+		max-width: 0%
+	}
+
+}
+#svg-under-page{
+	.display-screen{
+		animation: screen-changer infinite 6s linear 1s,scrolling-u-1 infinite 10s linear 1s;		
+	}
+	.box-selector{
+		animation: screen-selector infinite 6s linear 1s,scrolling-u-4 infinite 10s linear 1s;		
+	}
+	.box-holder{
+		animation: scrolling-u-2 infinite 10s linear 1s;	
+	}
+	.box{
+		animation: scrolling-u-3 infinite 10s linear 1s;			
+	}
+}
+
+
+@keyframes slider-spinning{
+	0%{
+		transform: rotate(0deg);
+	}
+	20%{
+		transform: rotate(360deg);
+	}	
+	40%{
+		transform: rotate(720deg);
+	}									
+	100%{
+		transform: rotate(1080deg);
+	}				
+}
+
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes exit-circle{
+	from {
+		fill:rgba(255,100,100,0.5);
+	}
+	to{
+		fill:rgba(255,100,100,1);
+	}
+}
+@keyframes logo-rect{
+	from{
+		width: 20px;
+		height: 20px;
+	}
+	to{
+		width: 22px;
+		height: 22px;
+	}
+}
+@keyframes fromzerotomax{
+	from{
+		opacity: 0;
+		width: 0px;
+	}
+	to{
+		opacity: 1;
+		width: 10px;
+	}
+}
+.svg-border{
+  stroke-dasharray: 1550;
+  stroke-dashoffset: 1550;
+  animation: border-draw 3s linear forwards;
+}
+@keyframes  border-draw {
+  to {
+	 stroke-dashoffset: 0;
+  }
+}
+
+@keyframes scrolling{
+	0%{
+		y:28;
+	}
+	30%{
+		y:178;
+	}
+	60%{
+		y:178;	
+	}	
+	90%{
+		y:28;
+	}
+}
+@keyframes scrolling-2{
+	0%{
+		d:path("M0 50 l489 0");
+	}
+	30%{
+		d:path("M0 -190 l489 0");
+	}
+	60%{
+		d:path("M0 -190 l489 0");		
+	}
+	90%{
+		d:path("M0 50 l489 0");
+	}
+}
+@keyframes scrolling-3{
+	0%{
+		y:30;
+	}
+	30%{
+		y:-210;	
+	}
+	60%{
+		y:-210;	
+	}
+	90%{
+		y:30;
+		}
+}
+@keyframes scrolling-33{
+	0%{
+		y:25;
+	}
+	30%{
+		y:-215;	
+	}
+	60%{
+		y:-215;	
+	}
+	90%{
+		y:25;
+		}
+}
+@keyframes scrolling-4{
+	0%{
+		y:60;
+	}
+	30%{
+		y:-180;	
+	}
+	60%{
+		y:-180;	
+	}
+	90%{
+		y:60;
+		}
+}
+@keyframes scrolling-61{
+	0%{
+		y:145;
+	}
+	30%{
+		y:-95;	
+	}
+	60%{
+		y:-95;	
+	}
+	90%{
+		y:145;
+		}
+}
+@keyframes scrolling-62{
+	0%{
+		y:160;
+	}
+	30%{
+		y:-80;	
+	}
+	60%{
+		y:-80;	
+	}
+	90%{
+		y:160;
+		}
+}
+@keyframes scrolling-63{
+	0%{
+		y:175;
+	}
+	30%{
+		y:-65;	
+	}
+	60%{
+		y:-65;	
+	}
+	90%{
+		y:175;
+		}
+}
+@keyframes scrolling-64{
+	0%{
+		y:190;
+	}
+	30%{
+		y:-50;	
+	}
+	60%{
+		y:-50;	
+	}
+
+	90%{
+		y:190;
+		}
+}
+@keyframes scrolling-65{
+	0%{
+		y:205;
+	}
+	30%{
+		y:-35;	
+	}
+	60%{
+		y:-35;	
+	}
+	90%{
+		y:205;
+		}
+}
+@keyframes scrolling-66{
+	0%{
+		y:220;
+	}
+	30%{
+		y:-20;	
+	}
+	60%{
+		y:-20;	
+	}	
+	90%{
+		y:220;
+		}
+}
+@keyframes scrolling-67{
+	0%{
+		y:235;
+	}
+	30%{
+		y:-5;	
+	}
+	60%{
+		y:-5;	
+	}
+	90%{
+		y:235;
+		}
+}
+@keyframes scrolling-68{
+	0%{
+		y:250;
+	}
+	30%{
+		y:10;	
+	}
+	60%{
+		y:10;	
+	}	
+	90%{
+		y:250;
+		}
+}
+@keyframes scrolling-u-1{
+	0%{
+		y:300;
+	}
+	30%{
+		y:50;	
+	}
+	60%{
+		y:50;	
+	}	
+	90%{
+		y:300;
+		}
+}
+@keyframes scrolling-u-2{
+	0%{
+		y:450;
+	}
+	30%{
+		y:200;	
+	}
+	60%{
+		y:200;	
+	}	
+	90%{
+		y:450;
+		}
+}
+@keyframes scrolling-u-3{
+	0%{
+		y:460;
+	}
+	30%{
+		y:210;	
+	}
+	60%{
+		y:210;	
+	}	
+	90%{
+		y:460;
+		}
+}
+@keyframes scrolling-u-4{
+	0%{
+		y:505;
+	}
+	30%{
+		y:255;
+	}
+	60%{
+		y:255;
+	}	
+	90%{
+		y:505;
+		}
+}
+@keyframes screen-selector{
+	0%{
+		x:230;
+	}
+	20%{
+		x:100;
+	}
+	40%{
+		x:360;
+		}
+	60%{
+		x:165;
+	}
+	80%{
+		x:295;
+	}
+	100%{
+		x:230;
+	}
+
+}
+@keyframes screen-changer{
+	0%{
+		fill:rgba(255,255,255,1);
+	}
+	20%{
+		fill:rgba(255,0,0,1);
+	}
+	40%{
+		fill:rgba(255,255,0,1);
+	}
+	60%{
+		fill:rgba(0,255,255,1);
+	}
+	80%{
+		fill:rgba(255,0,255,1);
+	}
+	100%{
+		fill:rgba(255,255,255,1);
+	}
+
+}
+
+@keyframes slider-color-changing-1 {
+	0%{
+		background: linear-gradient(to right, blue, green 50%, transparent 50%, transparent 100%);				
+	}
+	25%{
+		background: linear-gradient(to right, transparent, transparent 50%, transparent 50%, transparent 100%);					
+	}
+	50%{
+		background: linear-gradient(to right, transparent, transparent 50%, transparent 50%, transparent 100%);					
+	}
+	75%{
+		background: linear-gradient(to left, blue, green 50%, transparent 50%, transparent 100%);							
+	}
+	100%{
+		background: linear-gradient(to right, blue, green 50%, transparent 50%, transparent 100%);						
+	}						
+}
+@keyframes slider-color-changing-2 {
+	0%{
+		background: linear-gradient(to right, transparent, transparent 50%, transparent 50%, transparent 100%);				
+	}
+	25%{
+		background: linear-gradient(to right, blue, green 50%, transparent 50%, transparent 100%);
+	}
+	50%{
+		background: linear-gradient(to left, blue, green 50%, transparent 50%, transparent 100%);				
+	}
+	75%{
+		background: linear-gradient(to right, transparent, transparent 50%, transparent 50%, transparent 100%);				
+	}	
+	100%{
+		background: linear-gradient(to right, transparent, transparent 50%, transparent 50%, transparent 100%);				
+	}					
+}	
+.slider-under{
+	animation:  slider-go-down 1s linear;
+}
+
+@keyframes slider-go-down{
+	to{
+		transform: translateY(400
+
+			px);
+	}
+}

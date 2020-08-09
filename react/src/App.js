@@ -11,9 +11,7 @@ class App extends Component {
   return (
       <section>
         <Navigation/>
- //       <Intro/>
-   //     <About/>
- //       <Projects pjlist={projectlist}/>
+
         <Contact/>
       </section>
   );

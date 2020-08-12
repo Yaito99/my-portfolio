@@ -244,13 +244,18 @@ clip-path: polygon(0 -2%, 100% -2%, 100% 100%, 0% 100%);
 }
 
 @media (max-width: 425px) {
+
 #about-section .skillset {
     padding-left: 0;
+		.flex-row-reverse{
+			padding-right: 0;
+		}
+	
 }	
 #projects-section{
 .slider-show {
     width: 95vw;
-    height: 70vh;
+    height: 200px;
     .centered{
         overflow-x: hidden;
     }

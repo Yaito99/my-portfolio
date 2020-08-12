@@ -36,7 +36,7 @@ function About(props) {
 					<Bar barname="CSS" barpercent="80%"/>
 					<Bar barname="JavaScript" barpercent="70%"/>
 					<Bar barname="React" barpercent="60%"/>
-					<Bar barname="Sass" barpercent="80%"/>
+					<Bar barname="Sass" barpercent="50%"/>
 					<Bar barname="Bootstrap" barpercent="70%"/>
 				</Col>
 			</Row>

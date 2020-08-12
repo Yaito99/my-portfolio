@@ -27,7 +27,6 @@ function Projects(props) {
 	}
 	function onProjectSelect(name,img,desc,time,id){
 		setCurSlider(parseInt(id))
-		setAnimeStateB(true)
 		setSliderProject({company:name,img:img,desc:desc,time:time})
 	}
   return (
@@ -52,7 +51,7 @@ function Projects(props) {
 					</Row>
 				</Container>
 			</Row>
-			<div className={animestateB ? "slider-under" : ""} onAnimationEnd={() => {setAnimeStateC(true)}}>
+			<div className={animestateB ? "slider-under" : ""} onAnimationEnd={() => {animestateA ? console.log("as") : setAnimeStateC(true)}}>
 				<Row>
 					<Container className={animestateA ? "slider-star slider-star-anime" : "slider-star"} onAnimationEnd={() =>{setAnimeStateA(false)}}>
 						<Row className={ curslider === 0 ? "slider-row slider-row-1" : "slider-row"}>
@@ -89,7 +88,7 @@ function Projects(props) {
 	</section>
   );
   function ProjectLogo(props){
-  	return(	<button onClick={() => {onProjectSelect(props.proname,props.src,props.desc,props.time,props.cls[8])}} className="dbutton"><img alt={props.proname} className={props.cls}  src={props.src} /></button>
+  	return(	<button onClick={() => {setAnimeStateB(true);onProjectSelect(props.proname,props.src,props.desc,props.time,props.cls[8])}} className="dbutton"><img alt={props.proname} className={props.cls}  src={props.src} /></button>
 )
   }
 }

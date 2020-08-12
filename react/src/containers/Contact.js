@@ -62,7 +62,7 @@ function Contact(props) {
 							<Form.Control onChange={(event)=>{setConMessage(event.target.value)}} value={ConMessage}  as="textarea" rows={8} placeholder="....." />
 						</Form.Group>
 						<div className="centered">
-						  <Button variant="primary" type="submit">
+						  <Button className="contact-submit" variant="primary" type="submit">
 						    Submit
 						  </Button>
 						</div>		

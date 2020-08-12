@@ -1,0 +1,242 @@
+$ntheme:true !default;
+.blue{
+$color-1:#00072D !global;
+$color-2:#001C55 !global;
+$color-3:#0A2472 !global;
+$color-4:#0E6BA8 !global;
+$color-5:#A6E1FA !global;
+	#navigation-section{background-color: $color-1 !important;transition: background-color 1s;
+						.nav-link{color:$color-5}
+		.wave:before{background: $color-4;}}
+	#intro-section{color: $color-5;background-color: $color-1; transition: background-color 1s}
+	#about-section{
+		color: $color-5;
+		border-top:3px solid $color-5;
+		background-color: $color-1;
+		transition: background-color 1s;		
+	.skillset{
+		.skill-bar{background-color: $color-2;transition: background-color 1s;
+			.bar-name{background-color: $color-2;transition: background-color 1s;}
+			.bar-percent{background-color: $color-5;transition: background-color 1s;}
+		}}}
+	#projects-section{
+		background-color: $color-4;
+		transition: background-color 1s;		
+		color: $color-1;
+		.slider-show{border:2px solid $color-1;
+		.row{.slider-show-col{border-right: 2px solid $color-1;}}
+	}
+	.slider-star{background-color: $color-1;transition: background-color 1s;
+		.slider-row-1{
+			animation:  slider-color-changing-11 infinite 8s linear;	
+			}
+
+		.slider-row-2{
+			animation:  slider-color-changing-22 infinite 8s linear;				
+			}	
+	}
+		.slider-nav{.navar{border:1px solid $color-1;}
+			.navar-active{background-color: $color-1;}}
+	.slider{border:1px solid $color-5;}	
+	.slider-color{background: linear-gradient(to top,$color-5, $color-3 100%);}		
+	}
+
+	#contact-section{
+		background-color: $color-5;	
+		color: $color-2;
+	transition: background-color 1s	;
+	.contact-submit{
+		background-color: $color-3;
+		color:$color-5;
+		border-color:$color-5;		
+	}
+	.contact-submit:hover{
+		background-color: $color-5;
+		border-color:$color-3;
+		color:$color-3;
+	}
+
+	}
+	.bt-border{	border-bottom: 1px solid $color-5;}	
+
+@keyframes slider-color-changing-11 {
+	0%{
+		background: linear-gradient(to right, $color-5, $color-3 50%, transparent 50%, transparent 100%);				
+	}
+	25%{
+		background: linear-gradient(to right, transparent, transparent 50%, transparent 50%, transparent 100%);					
+	}
+	50%{
+		background: linear-gradient(to right, transparent, transparent 50%, transparent 50%, transparent 100%);					
+	}
+	75%{
+		background: linear-gradient(to left, $color-5, $color-3 50%, transparent 50%, transparent 100%);							
+	}
+	100%{
+		background: linear-gradient(to right, $color-5, $color-3 50%, transparent 50%, transparent 100%);						
+	}						
+}
+@keyframes slider-color-changing-22 {
+	0%{
+		background: linear-gradient(to right, transparent, transparent 50%, transparent 50%, transparent 100%);				
+	}
+	25%{
+		background: linear-gradient(to right, $color-5, $color-3 50%, transparent 50%, transparent 100%);
+	}
+	50%{
+		background: linear-gradient(to left, $color-5, $color-3 50%, transparent 50%, transparent 100%);				
+	}
+	75%{
+		background: linear-gradient(to right, transparent, transparent 50%, transparent 50%, transparent 100%);				
+	}	
+	100%{
+		background: linear-gradient(to right, transparent, transparent 50%, transparent 50%, transparent 100%);				
+	}					
+}	
+#svg-under-page{
+	.display-screen{
+		animation: screen-changer-2 infinite 6s linear 1s,scrolling-u-1 infinite 10s linear 1s;		
+	}
+}
+@keyframes screen-changer-2{
+	0%{
+		fill:$color-1;
+	}
+	20%{
+		fill:$color-5;
+	}
+	40%{
+		fill:$color-4;
+	}
+	60%{
+		fill:$color-2;
+	}
+	80%{
+		fill:$color-3;
+	}
+	100%{
+		fill:$color-1;
+	}
+
+}
+}
+.green{
+$color-1:#AAFCB8 !global;
+$color-2:#D7FFF1 !global;
+$color-3:#8CD790 !global;
+$color-4:#77AF9C !global;
+$color-5:#285943 !global;
+	#navigation-section{background-color: $color-1 !important;transition: background-color 1s;
+						.nav-link{color:$color-5}
+		.wave:before{background: $color-4;}}
+	#intro-section{color: $color-5;background-color: $color-1; transition: background-color 1s}
+	#about-section{
+		color: $color-5;
+		border-top:3px solid $color-5;
+		background-color: $color-1;
+		transition: background-color 1s;		
+	.skillset{
+		.skill-bar{background-color: $color-2;transition: background-color 1s;
+			.bar-name{background-color: $color-2;transition: background-color 1s;}
+			.bar-percent{background-color: $color-5;transition: background-color 1s;}
+		}}}
+	#projects-section{
+		background-color: $color-4;
+		transition: background-color 1s;		
+		color: $color-1;
+		.slider-show{border:2px solid $color-1;
+		.row{.slider-show-col{border-right: 2px solid $color-1;}}
+	}
+	.slider-star{background-color: $color-1;transition: background-color 1s;
+		.slider-row-1{
+			animation:  slider-color-changing-1 infinite 8s linear;	
+			}
+
+		.slider-row-2{
+			animation:  slider-color-changing-2 infinite 8s linear;				
+			}	
+	}
+		.slider-nav{.navar{border:1px solid $color-1;}
+			.navar-active{background-color: $color-1;}}
+	.slider{border:1px solid $color-5;}	
+	.slider-color{background: linear-gradient(to top,$color-5, $color-3 100%);}		
+	}
+
+	#contact-section{
+		background-color: $color-5;	
+		color: $color-2;
+	transition: background-color 1s	;
+		.contact-submit{
+		background-color: $color-3;
+		color:$color-5;
+		border-color:$color-5;
+	}
+	.contact-submit:hover{
+		background-color: $color-5;
+		border-color:$color-3;
+		color:$color-3;
+	}	
+	}
+	.bt-border{	border-bottom: 1px solid $color-5;}	
+
+@keyframes slider-color-changing-1 {
+	0%{
+		background: linear-gradient(to right, $color-5, $color-3 50%, transparent 50%, transparent 100%);				
+	}
+	25%{
+		background: linear-gradient(to right, transparent, transparent 50%, transparent 50%, transparent 100%);					
+	}
+	50%{
+		background: linear-gradient(to right, transparent, transparent 50%, transparent 50%, transparent 100%);					
+	}
+	75%{
+		background: linear-gradient(to left, $color-5, $color-3 50%, transparent 50%, transparent 100%);							
+	}
+	100%{
+		background: linear-gradient(to right, $color-5, $color-3 50%, transparent 50%, transparent 100%);						
+	}						
+}
+@keyframes slider-color-changing-2 {
+	0%{
+		background: linear-gradient(to right, transparent, transparent 50%, transparent 50%, transparent 100%);				
+	}
+	25%{
+		background: linear-gradient(to right, $color-5, $color-3 50%, transparent 50%, transparent 100%);
+	}
+	50%{
+		background: linear-gradient(to left, $color-5, $color-3 50%, transparent 50%, transparent 100%);				
+	}
+	75%{
+		background: linear-gradient(to right, transparent, transparent 50%, transparent 50%, transparent 100%);				
+	}	
+	100%{
+		background: linear-gradient(to right, transparent, transparent 50%, transparent 50%, transparent 100%);				
+	}					
+}	
+#svg-under-page{
+	.display-screen{
+		animation: screen-changer-3 infinite 6s linear 1s,scrolling-u-1 infinite 10s linear 1s;		
+	}
+}
+@keyframes screen-changer-3{
+	0%{
+		fill:$color-1;
+	}
+	20%{
+		fill:$color-5;
+	}
+	40%{
+		fill:$color-4;
+	}
+	60%{
+		fill:$color-2;
+	}
+	80%{
+		fill:$color-3;
+	}
+	100%{
+		fill:$color-1;
+	}
+
+}
+}

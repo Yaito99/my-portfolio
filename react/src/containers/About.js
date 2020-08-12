@@ -2,7 +2,7 @@ import  React , {useState} from 'react';
 import { Container , Row , Col ,OverlayTrigger ,Tooltip } from 'react-bootstrap';
 import Bar from '../components/bar'
 import { useScrollPosition } from '../components/scrollpos'
-function About() {
+function About(props) {
 	const [scrollstate, setScrollState] = useState(0);	
 	const [animestateA, setAnimeStateA] = useState(false);	
 	useScrollPosition(({ prevPos, currPos }) => {
@@ -25,7 +25,7 @@ function About() {
 			<Row className={animestateA ? 'skillset skillset-anime': "hidden"}>
 				<Col lg={5}>
 					 <OverlayTrigger popperConfig={{modifiers: [{name: 'offset',options: {offset: [0, -30],},},],}} placement="right-start" delay={{ show: 1, hide: 200 }} overlay={<Tooltip id="avatar-tooltip"><h4>Hi There!</h4></Tooltip>}>
-						<img className="avatar" alt="yaito-avatar" src="img/avatar2.png"/>
+						<img className="avatar" alt="yaito-avatar" src={props.theme === "blue" ? "img/avatar2.png" : "img/avatar.png"}/>
 					 </OverlayTrigger>						
 						<h5>Yahya</h5>
 				</Col>

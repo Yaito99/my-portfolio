@@ -1,7 +1,7 @@
 import  React from 'react';
 import { Container , Row , Col } from 'react-bootstrap';
 import Laptop from '../components/laptop'
-function Intro() {
+function Intro(props) {
   return (
 	<section id="intro-section">
 		<Container>
@@ -13,7 +13,7 @@ function Intro() {
 			</Row>
 			<Row>
 				<Col>
-					<Laptop/>
+					<Laptop theme={props.theme} themeColor={props.colors}/>
 				</Col>
 			</Row>
 		</Container>

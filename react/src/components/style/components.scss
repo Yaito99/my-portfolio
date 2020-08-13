@@ -241,8 +241,38 @@ clip-path: polygon(0 -2%, 100% -2%, 100% 100%, 0% 100%);
 		right:0;
 		top:0;
 	}
-}
 
+}
+.error-tooltip::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;  /* At the top of the tooltip */
+  left: 5%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+.error-tooltip{
+		position: relative;
+        background-color: white;
+        padding: 2px 10px;
+        color: black;
+        border-radius: 5px;
+        border:1px solid black;
+        padding-top:0.25rem;
+        padding-bottom: 0.25rem;
+        span{
+        	background-color: orange;
+        	margin-right: 0.5rem;
+        	padding-left:0.5rem;
+        	padding-right:0.5rem;    
+        	font-weight: bolder;
+        	font-size: 18px;
+        	color: white;    	
+        	border-radius: 1px;
+          }
+        }
 @media (max-width: 425px) {
 
 #about-section .skillset {

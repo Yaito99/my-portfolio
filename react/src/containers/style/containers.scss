@@ -4,7 +4,7 @@
 }
 
 #intro-section{
-	padding-top: 20vh;
+	padding-top: 4rem;
 	text-align: center;
 }
 #about-section{
@@ -23,3 +23,10 @@
 	padding-bottom: 5rem;
 }
 
+@media (max-width: 600px) {
+#intro-section{
+	padding-top: 20vh;
+	text-align: center;
+}
+
+}

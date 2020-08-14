@@ -1,5 +1,5 @@
 import  React ,{ useState } from 'react';
-import { Container , Row , Col , Form , Button , OverlayTrigger ,Tooltip , Alert} from 'react-bootstrap';
+import { Container , Row , Col , Form , Button , OverlayTrigger  , Alert} from 'react-bootstrap';
 
 function Contact(props) {
 	const [ConName, setConName] = useState("");
@@ -10,11 +10,6 @@ function Contact(props) {
 	const [ConMessageError, setConMessageError] = useState(false);		
 	const [FormState, setFormState] = useState(true);
 	const [FormPromise, setFormPromise] = useState(0);	
-	function resetError(){
-		setConNameError(false)		
-		setConEmailError(false)		
-		setConMessageError(false)		
-	}
 	function handleSubmit(e) {
 		let VaildState = 0
 		e.preventDefault();

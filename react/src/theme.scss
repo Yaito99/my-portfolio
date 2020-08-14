@@ -167,14 +167,14 @@ $color-5:#8EF8A0 !global;
 		color: $color-2;
 	transition: background-color 1s	;
 		.contact-submit{
-		background-color: $color-3;
+		background-color: $color-1;
 		color:$color-5;
 		border-color:$color-5;
 	}
 	.contact-submit:hover{
 		background-color: $color-5;
-		border-color:$color-3;
-		color:$color-3;
+		border-color:$color-1;
+		color:$color-1;
 	}	
 	}
 	.bt-border{	border-bottom: 1px solid $color-5;}	

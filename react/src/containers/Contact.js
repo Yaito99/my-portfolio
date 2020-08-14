@@ -1,5 +1,5 @@
 import  React ,{ useState } from 'react';
-import { Container , Row , Col , Form , Button , OverlayTrigger ,Tooltip } from 'react-bootstrap';
+import { Container , Row , Col , Form , Button , OverlayTrigger ,Tooltip , Alert} from 'react-bootstrap';
 
 function Contact(props) {
 	const [ConName, setConName] = useState("");
@@ -9,13 +9,20 @@ function Contact(props) {
 	const [ConEmailError, setConEmailError] = useState(false);
 	const [ConMessageError, setConMessageError] = useState(false);		
 	const [FormState, setFormState] = useState(true);
-	let a,b,c = false
+	const [FormPromise, setFormPromise] = useState(0);	
+	function resetError(){
+		setConNameError(false)		
+		setConEmailError(false)		
+		setConMessageError(false)		
+	}
 	function handleSubmit(e) {
+		let VaildState = 0
 		e.preventDefault();
-		if (ConName===""){setConNameError(true)}
-		else if (ConEmail===""){setConNameError(false);setConEmailError(true)}
-		else if (ConMessage===""){setConEmailError(false);setConMessageError(true)}
-		else if (FormState){setConMessageError(false);sendForm();setFormState(false)}
+		if (ConName===""){setConNameError(true)} else{VaildState+=1}
+		if (ConEmail===""){setConEmailError(true)} else{VaildState+=1}
+		if (ConMessage===""){setConMessageError(true)} else{VaildState+=1}
+		console.log (FormState, VaildState)
+		if (FormState && VaildState === 3){sendForm();setFormState(false)}
 		  }
   function sendForm(){
   			fetch('./send',{
@@ -29,10 +36,10 @@ function Contact(props) {
 		    	(response) => (response.json())
 		       ).then((response)=>{
 		      if (response.status === 'success'){
-		        alert("Message Sent."); 
+		        setFormPromise(1) 
 		        resetForm()
 		      }else if(response.status === 'fail'){
-		        alert("Message failed to send.")
+				setFormPromise(3)
 		      }
 	    })
   }
@@ -59,7 +66,7 @@ function Contact(props) {
 					 <OverlayTrigger show={ConNameError}  placement="bottom-start" delay={{ hide: 2000 }} overlay={({ placement, arrowProps, show: _show, popper, ...props }) => (<div className="error-tooltip" {...props}><span>!</span>Please write your Name</div>)}>
 								<Form.Group controlId="formGroupName">
 									<Form.Label>Name</Form.Label>
-									<Form.Control onChange={(event)=>{setConName(event.target.value)}} value={ConName} type="text" placeholder="" />
+									<Form.Control onChange={(event)=>{setConNameError(false);setConName(event.target.value)}} value={ConName} type="text" placeholder="" />
 								</Form.Group>
 					 </OverlayTrigger>		
 					   		</Col>
@@ -67,7 +74,7 @@ function Contact(props) {
 					 <OverlayTrigger show={ConEmailError} placement="bottom-start" delay={{ hide: 2000 }} overlay={({ placement, arrowProps, show: _show, popper, ...props }) => (<div className="error-tooltip" {...props}><span>!</span>Please write your Email</div>)}>
 								<Form.Group controlId="formGroupEmail">
 									<Form.Label>Email</Form.Label>
-									<Form.Control onChange={(event)=>{setConEmail(event.target.value)}} value={ConEmail}  type="email" placeholder="" />
+									<Form.Control onChange={(event)=>{setConEmailError(false);setConEmail(event.target.value)}} value={ConEmail}  type="email" placeholder="" />
 								</Form.Group>				   		
 					 </OverlayTrigger>		
 					   		</Col>
@@ -75,13 +82,19 @@ function Contact(props) {
 					 <OverlayTrigger show={ConMessageError} placement="bottom-start" delay={{ hide: 2000 }} overlay={({ placement, arrowProps: _arrowProps, show: _show, popper, ...props }) => (<div className="error-tooltip" {...props}><span>!</span>Please write your Message</div>)}>
 						<Form.Group controlId="formGroupMessage">
 							<Form.Label>Message</Form.Label>
-							<Form.Control onChange={(event)=>{setConMessage(event.target.value)}} value={ConMessage}  as="textarea" rows={8} placeholder="....." />
+							<Form.Control onChange={(event)=>{setConMessageError(false);setConMessage(event.target.value)}} value={ConMessage}  as="textarea" rows={8} placeholder="....." />
 						</Form.Group>
 					 </OverlayTrigger>		
 						<div className="centered">
 						  <Button className="contact-submit" variant="primary" type="submit">
 						    Submit
 						  </Button>
+						  <Alert className={FormPromise===1 ? "" : "hidden"} key={1} variant={props.theme === "blue" ? "primary" : "success"}>
+						    Your message has been sent successfully
+						  </Alert>						  
+						  <Alert className={FormPromise===3 ? "" : "hidden"} key={3} variant={"danger"}>
+						    Ops! your message has been not sent , try again later
+						  </Alert>							  						  
 						</div>		
 					</Form>
 				</Col>

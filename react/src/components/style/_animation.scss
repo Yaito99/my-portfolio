@@ -1,4 +1,3 @@
-@import "../../theme";
 #navigation-section{
 	.nav-logo{
 		z-index: 1000;
@@ -35,18 +34,12 @@
 
 @keyframes animate
 {
-	0%
-	{
-		transform: rotate(60deg);
+	0%{
+		transform: rotate(0deg);
 	}
-	50%
-	{	
-		transform:rotate(100deg);
+	100%{	
+		transform:rotate(360deg);
 	}
-	100%
-	{	
-		transform:rotate(60deg);
-	}	
 }
 
 @keyframes animate-2

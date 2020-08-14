@@ -17,7 +17,7 @@ class App extends Component {
 	onThemeChange= () =>{
 		let current = this.state.theme
 		let nexttheme= current === "blue" ? "green" : "blue"
-		let colors = current === "blue" ? ["#AAFCB8","#D7FFF1","#8CD790","#77AF9C","#285943"] : ["#00072D","#001C55","#0A2472","#0E6BA8","#A6E1FA"]
+		let colors = current === "blue" ? ["#002D07","#3F825A","#8CD790","#008148","#8EF8A0"] :["#00072D","#001C55","#0A2472","#0E6BA8","#A6E1FA"]
 		this.setState({theme : nexttheme,colors: colors})
 	}
   	render(){

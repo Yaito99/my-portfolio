@@ -16,13 +16,13 @@ $color-5:#A6E1FA !global;
 		transition: background-color 1s;		
 	.skillset{
 		.skill-bar{background-color: $color-2;transition: background-color 1s;
-			.bar-name{background-color: $color-2;transition: background-color 1s;}
+			.bar-name{background-color: $color-2;border-right: 1px solid $color-5;transition: background-color 1s;}
 			.bar-percent{background-color: $color-5;transition: background-color 1s;}
 		}}}
 	#projects-section{
 		background-color: $color-4;
 		transition: background-color 1s;		
-		color: $color-1;
+		color: $color-5;
 		.slider-show{border:2px solid $color-1;
 		.row{.slider-show-col{border-right: 2px solid $color-1;}}
 	}
@@ -121,11 +121,11 @@ $color-5:#A6E1FA !global;
 }
 }
 .green{
-$color-1:#AAFCB8 !global;
-$color-2:#D7FFF1 !global;
+$color-1:#002D07 !global;
+$color-2:#00551C !global;
 $color-3:#8CD790 !global;
-$color-4:#77AF9C !global;
-$color-5:#285943 !global;
+$color-4:#008148 !global;
+$color-5:#8EF8A0 !global;
 	#navigation-section{background-color: $color-1 !important;transition: background-color 1s;
 						.nav-link{color:$color-5}
 		.wave:before{background: $color-4;}}
@@ -137,13 +137,13 @@ $color-5:#285943 !global;
 		transition: background-color 1s;		
 	.skillset{
 		.skill-bar{background-color: $color-2;transition: background-color 1s;
-			.bar-name{background-color: $color-2;transition: background-color 1s;}
+			.bar-name{background-color: $color-2;border-right: 1px solid $color-5;transition: background-color 1s;}
 			.bar-percent{background-color: $color-5;transition: background-color 1s;}
 		}}}
 	#projects-section{
 		background-color: $color-4;
 		transition: background-color 1s;		
-		color: $color-1;
+		color: $color-5;
 		.slider-show{border:2px solid $color-1;
 		.row{.slider-show-col{border-right: 2px solid $color-1;}}
 	}

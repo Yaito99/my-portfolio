@@ -44,7 +44,7 @@ function Laptop(props){
 	<Container className="my-lab" style={{backgroundImage : props.theme === "blue" ? 'url("/img/laptop-1.png")' : 'url("/img/laptop-2.png")'}}>
 		<div className="d-flex justify-content-center">
 			<div className={fusestate ? "magic-work" : ""}>	
-				<Button className="btn" onClick={() => {setFusestate(true)}}>
+				<Button className="dbutton" onClick={() => {setFusestate(true)}}>
 					 <OverlayTrigger show={triggerstate} placement="top-start" delay={{ show: 1, hide: 200 }} overlay={<Tooltip id="logo-tooltip">Click on me!</Tooltip>}>
 						<img className="yaito-logo" alt="mylogo" onAnimationEnd={() =>{setFusestate(true)}} src={props.theme === "blue" ? "img/logo-1.png" : "img/logo-2.png"} width="60"/>		
 					 </OverlayTrigger>				

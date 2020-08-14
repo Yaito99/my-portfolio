@@ -1,6 +1,6 @@
 import  React ,{ useState } from 'react';
 import { Container , Row , Col } from 'react-bootstrap';
-import { useSwipeable, Swipeable } from 'react-swipeable'
+import { Swipeable } from 'react-swipeable'
 function Projects(props) {
 	const [animestateA, setAnimeStateA] = useState(false);	
 	const [animestateB, setAnimeStateB] = useState(false);		
@@ -44,7 +44,7 @@ function Projects(props) {
 	}
   return (
 	<section id="projects-section">
-		<Swipeable onSwipedLeft={(eventData) => onNavarChangeWithValue(false)}   onSwipedRight={(eventData) => onNavarChangeWithValue(true)}>			
+		<Swipeable onSwipedLeft={(eventData) => onNavarChangeWithValue(true)}   onSwipedRight={(eventData) => onNavarChangeWithValue(false)}>			
 		<Container>
 			<Row>
 				<Col className="centered">

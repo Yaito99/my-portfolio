@@ -1,5 +1,5 @@
 import  React ,{ useState } from 'react';
-import { Container , Row , Col , Form , Button , OverlayTrigger  , Alert} from 'react-bootstrap';
+import { Container , Row , Col , Form , Button , OverlayTrigger , Alert} from 'react-bootstrap';
 
 function Contact(props) {
 	const [ConName, setConName] = useState("");
